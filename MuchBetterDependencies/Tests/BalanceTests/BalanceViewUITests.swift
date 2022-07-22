@@ -24,4 +24,20 @@ final class BalanceUITests: XCTestCase {
 
     assertSnapshot(matching: balanceView, as: .image(on: .iPhoneXsMax))
   }
+
+  func testBalanceWithErrorAlert() {
+    var environment = BalanceEnvironment.mock
+      environment.fetchBalance = {
+        Effect(error: BalanceError.message("Error"))
+      }
+      let store = Store(
+        initialState: .init(balance: "111.11"),
+        reducer: balanceReducer,
+        environment: environment
+      )
+
+    let balanceView = UIHostingController(rootView: BalanceView(store: store))
+
+    assertSnapshot(matching: balanceView, as: .image(on: .iPhoneXsMax))
+  }
 }

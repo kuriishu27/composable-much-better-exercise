@@ -25,12 +25,14 @@ Compared to other ways of building and developing applications, TCA allows for b
 Productivity increases while cognitive load stays at a manageable level.
 
 ## About 
-The application logs in silenty in the background requesting for a token that will be used to fetch the balance and transactions from the user.
+The application logs in silently in the background requesting for a token that will be used to fetch the balance and transactions from the user.
 
 ## For developers running the code
-To run the app, open the .xcworspace file and Xcode will start fetching the dependencies. All you need to do is select "composable-much-better-exercise" scheme and run the app with a Simulator @ iOS 15.0.
+To run the app.
 
-By default, the app will run in "mock" mode. This is to avoid any third party real API requests. This can be swapped easily by changing **.mock** from the @main AppView's store to **.live**
+1. Open the .xcworkspace file and Xcode will start fetching the dependencies. All you need to do is select "composable-much-better-exercise" scheme and run the app with a Simulator @ iOS 15.0.
+2. Select the composable-much-better-exercise scheme and build/run.
+2. To run all tests, select the AllTests scheme and CMD + U. More information about this on the MuchBetterDependencies README.md file.
 
 ## Features
 

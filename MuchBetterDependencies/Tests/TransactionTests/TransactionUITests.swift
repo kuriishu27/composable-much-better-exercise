@@ -32,6 +32,6 @@ final class TransactionUITests: XCTestCase {
 
     let transactionView = UIHostingController(rootView: TransactionView(store: store))
 
-    assertSnapshot(matching: transactionView, as: .image(on: .iPhoneXsMax))
+    assertSnapshot(matching: transactionView, as: .image)
   }
 }
